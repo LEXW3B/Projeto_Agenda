@@ -1,6 +1,6 @@
 #Projeto Agenda para a faculdade 
 
-             #INPUT === PRONTO
+     #INPUT === PRONTO
 print('------------------------------------------------')
 print('=====================AGENDA=====================')
 print('------------------------------------------------')
@@ -13,27 +13,23 @@ print('')
 print('------------------------------------------------')
 print('')
 escolha = int(input('Digite o número da sua escolha: '))
-#print(escolha)
-
+    #print(escolha)
 if escolha == 1:
     escolha = ('lista')    
 else:
-    print('Fim de programa')
-break;
-    
+    escolha = str(input('Deseja continuar ? [S/N]: '))#bloco de repetição
+    if escolha == 'S/s':
+        escolha = int(input('Digite um número do cabeçalho: '))
+    else:
+        print('Fim de programa') 
           
-
-           #Bloco para adicionar contatos
+    #Bloco para adicionar contatos
 lista = dict()
 lista   ['Nome']   = str(input("Digite seu nome: "))
 lista   ['Email']  = input("Digite seu e-mail: ")
 lista   ['Insta']  = input("Digite seu usuário no Instagram: ")
 lista   ['Twi']    = (input("Digite seu usuário no Twitter: "))
 lista   ['Tel']    = int(input("Digite seu telefone: "))
-
-# if lista['Nome'] == str:
-#     lista['Nome']= str(input("Digite seu nome: "))
-
 
 # print(lista)
 
