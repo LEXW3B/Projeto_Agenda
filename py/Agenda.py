@@ -1,29 +1,41 @@
 #Projeto Agenda para a faculdade 
-# print('------------------------------------------------')
-# print('=====================AGENDA=====================')
-# print('------------------------------------------------')
-# print('')
-# print('Para adicionar contato tecle-----------------[1]')
-# print('Para buscar nomes existentes tecle-----------[2]')
-# print('Para alterar contatos tecle------------------[3]')
-# print('Para remover contato tecle-------------------[4]')
-# print('')
-# print('------------------------------------------------')
-# print('')#PRONTO
 
-           #INPUT === PRONTO
-lista = dict()
+             #INPUT === PRONTO
+print('------------------------------------------------')
+print('=====================AGENDA=====================')
+print('------------------------------------------------')
+print('')
+print('Para adicionar contato tecle-----------------[1]')
+print('Para buscar nomes existentes tecle-----------[2]')
+print('Para alterar contatos tecle------------------[3]')
+print('Para remover contato tecle-------------------[4]')
+print('')
+print('------------------------------------------------')
+print('')
+escolha = int(input('Digite o número da sua escolha: '))
+#print(escolha)
 
-lista   ['Nome']   = str(input("Digite seu nome: "))
-# lista   ['email']  = input("Digite seu e-mail: ")
-# lista   ['insta']  = input("Digite seu usuário no Instagram: ")
-# lista   ['twi']    = (input("Digite seu usuário no Twitter: "))
-# lista   ['tel']    = int(input("Digite seu telefone: "))
-
-if lista.Nome == str:
-    print(lista)
+if escolha == 1:
+    escolha = ('lista')    
 else:
-    nome=str(input("Digite seu nome: ")) 
+    print('Fim de programa')
+break;
+    
+          
+
+           #Bloco para adicionar contatos
+lista = dict()
+lista   ['Nome']   = str(input("Digite seu nome: "))
+lista   ['Email']  = input("Digite seu e-mail: ")
+lista   ['Insta']  = input("Digite seu usuário no Instagram: ")
+lista   ['Twi']    = (input("Digite seu usuário no Twitter: "))
+lista   ['Tel']    = int(input("Digite seu telefone: "))
+
+# if lista['Nome'] == str:
+#     lista['Nome']= str(input("Digite seu nome: "))
+
+
+# print(lista)
 
 
 
