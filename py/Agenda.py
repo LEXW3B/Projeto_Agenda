@@ -9,29 +9,55 @@ print('Para adicionar contato tecle-----------------[1]')
 print('Para buscar nomes existentes tecle-----------[2]')
 print('Para alterar contatos tecle------------------[3]')
 print('Para remover contato tecle-------------------[4]')
+print('Para sair tecle------------------------------[9]')
 print('')
 print('------------------------------------------------')
 print('')
+
 escolha = int(input('Digite o número da sua escolha: '))
-    #print(escolha)
+
 if escolha == 1:
-    escolha = ('lista')    
+    escolha = ('lista')
+elif escolha == 2:
+    print('buscar contatos cadastrados') 
+elif escolha == 3:
+    print('alterando contato')
+elif escolha == 4:
+    print=('removendo contato')
 else:
-    escolha = str(input('Deseja continuar ? [S/N]: '))#bloco de repetição
-    if escolha == 'S/s':
-        escolha = int(input('Digite um número do cabeçalho: '))
-    else:
-        print('Fim de programa') 
+    print('Fim de programa')   
           
     #Bloco para adicionar contatos
+
 lista = dict()
-lista   ['Nome']   = str(input("Digite seu nome: "))
+
+lista   ['Nome' ]   = str(input("Digite seu nome: "))
 lista   ['Email']  = input("Digite seu e-mail: ")
 lista   ['Insta']  = input("Digite seu usuário no Instagram: ")
-lista   ['Twi']    = (input("Digite seu usuário no Twitter: "))
-lista   ['Tel']    = int(input("Digite seu telefone: "))
+lista   [ 'Twi' ]    = input("Digite seu usuário no Twitter: ")
+lista   [ 'Tel' ]    = int(input("Digite seu telefone: "))
+continuar = str(input('vai continuar[S/N]: ')).upper()
 
-# print(lista)
+#bloco de repetição 
+if continuar == 'S':       
+    escolha = int(input('Digite o número da sua escolha: '))
+    if escolha==1:
+        escolha = ('lista')
+    else:
+        print('Fim de programa')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
