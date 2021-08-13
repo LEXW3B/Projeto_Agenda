@@ -17,19 +17,20 @@ while True:
     print('------------------------------------------------')
     print('')
     escolha = int(input('Digite o número da sua escolha: '))
+    
     if escolha == 1:
         nome  = str(input("Digite seu nome: "))
         email = input("Digite seu e-mail: ")
         insta = input("Digite seu usuário no Instagram: ")
         twitt = input("Digite seu usuário no Twitter: ")
         telef = int(input("Digite seu telefone: "))
-        lista = (controle.inserir(nome, email, insta, twitt, telef))#aqui problema
+        lista = nome, email, insta, twitt, telef #aqui problema
         continuar = str(input('vai continuar[S/N]: ')).upper()
         # os.system('cls')
     #===========agora e esse bloco==============================================
     elif escolha == 2:
         nome = input('Digite o nome para ser pesquisado: ')
-        controle.listarNome(nome, email, insta, twitt, telef)#problema aqui
+        controle.listarNome(lista, nome)#problema aqui
     #============================================================================
     elif escolha == 3:
         print('alterando contato')
@@ -39,19 +40,17 @@ while True:
         print('Fim de programa')  
 
     #bloco de repetição 
-    if continuar == 'S':       
-        def continuar(escolha):
-            return 'none'
-    else:
-        break 
+    # if continuar == 'S':       
+    #     def continuar(escolha):
+    #         return 'none'
+    # else:
+    #     break 
+    # from controle import telefone
     class controle():
         def inserir(nome, email, insta, twitt, telef):
             return telefone(nome, email, insta, twitt, telef)
-        def listarAll(lista):
-            for tel in lista:
-                print('{} | {}'.format(tel.getNome(), tel.getTelefone()))       
 #===========agora e esse bloco==============================================
-        def listarNome(nome, email, insta, twitt, telef):
+        def listarNome(lista, nome):
             cont = 0
             for tel in lista:#problema aqui
                 if tel.getNome() == lista:#aqui lista
@@ -59,6 +58,51 @@ while True:
                     break
                 cont += 1
 # ==========================================================================
+        def listarAll(lista):
+            for tel in lista:
+                print('{} | {}'.format(tel.getNome(), tel.getTelefone()))       
+
+
+        def deletarAll(lista):
+            if len(lista) != 0:
+                lista.clear()
+                return 'Todos os contatos foram removidos!'
+            else:
+                return 'A lista telefonica está vazia!'
+        def deletarNome(lista, nome):
+            if len(lista) != 0:
+                cont = 0
+                for tel in lista:
+                    if tel.getNome() == nome:
+                        lista.pop(cont)
+                        return 'Contado {} removido com sucesso!'.format(nome)
+                    else:
+                        return 'Nome não encontrado!'
+            else:
+                return 'Lista está vazia!' 
+    class telefone():
+        def __init__(self, nome, email, insta, twitt, telef):
+            self.__nome  = nome
+            self.__email = email
+            self.__insta = insta
+            self.__twitt = twitt
+            self.__telef = telef
+
+        def getNome(self):
+            return self.__nome
+
+        def getNome(self):
+            return self.__email
+
+        def getNome(self):
+            return self.__insta
+
+        def getNome(self):
+            return self.__twitt
+
+        def getTelefone(self):
+            return self.__telef
+    
    
 #BIBLIOTECA
 
