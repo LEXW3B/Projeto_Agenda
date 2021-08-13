@@ -1,66 +1,65 @@
 #Projeto Agenda para a faculdade 
 
      #INPUT === PRONTO
-print('------------------------------------------------')
-print('=====================AGENDA=====================')
-print('------------------------------------------------')
-print('')
-print('Para adicionar contato tecle-----------------[1]')
-print('Para buscar nomes existentes tecle-----------[2]')
-print('Para alterar contatos tecle------------------[3]')
-print('Para remover contato tecle-------------------[4]')
-print('Para sair tecle------------------------------[9]')
-print('')
-print('------------------------------------------------')
-print('')
-
-escolha = int(input('Digite o número da sua escolha: '))
-
-if escolha == 1:
-    escolha = ('lista')
-elif escolha == 2:
-    print('buscar contatos cadastrados') 
-elif escolha == 3:
-    print('alterando contato')
-elif escolha == 4:
-    print=('removendo contato')
-else:
-    print('Fim de programa')   
-          
-    #Bloco para adicionar contatos
-
-lista = dict()
-
-lista   ['Nome' ]   = str(input("Digite seu nome: "))
-lista   ['Email']  = input("Digite seu e-mail: ")
-lista   ['Insta']  = input("Digite seu usuário no Instagram: ")
-lista   [ 'Twi' ]    = input("Digite seu usuário no Twitter: ")
-lista   [ 'Tel' ]    = int(input("Digite seu telefone: "))
-continuar = str(input('vai continuar[S/N]: ')).upper()
-
-#bloco de repetição 
-if continuar == 'S':       
+import os
+lista=[]
+while True:
+    print('------------------------------------------------')
+    print('=====================AGENDA=====================')
+    print('------------------------------------------------')
+    print('')
+    print('Para adicionar contato tecle-----------------[1]')
+    print('Para buscar nomes existentes tecle-----------[2]')
+    print('Para alterar contatos tecle------------------[3]')
+    print('Para remover contato tecle-------------------[4]')
+    print('Para sair tecle------------------------------[9]')
+    print('')
+    print('------------------------------------------------')
+    print('')
     escolha = int(input('Digite o número da sua escolha: '))
-    if escolha==1:
-        escolha = ('lista')
+    if escolha == 1:
+        nome  = str(input("Digite seu nome: "))
+        email = input("Digite seu e-mail: ")
+        insta = input("Digite seu usuário no Instagram: ")
+        twitt = input("Digite seu usuário no Twitter: ")
+        telef = int(input("Digite seu telefone: "))
+        lista = (controle.inserir(nome, email, insta, twitt, telef))#aqui problema
+        continuar = str(input('vai continuar[S/N]: ')).upper()
+        # os.system('cls')
+    #===========agora e esse bloco==============================================
+    elif escolha == 2:
+        nome = input('Digite o nome para ser pesquisado: ')
+        controle.listarNome(nome, email, insta, twitt, telef)#problema aqui
+    #============================================================================
+    elif escolha == 3:
+        print('alterando contato')
+    elif escolha == 4:
+        print=('removendo contato')
     else:
-        print('Fim de programa')
+        print('Fim de programa')  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #bloco de repetição 
+    if continuar == 'S':       
+        def continuar(escolha):
+            return 'none'
+    else:
+        break 
+    class controle():
+        def inserir(nome, email, insta, twitt, telef):
+            return telefone(nome, email, insta, twitt, telef)
+        def listarAll(lista):
+            for tel in lista:
+                print('{} | {}'.format(tel.getNome(), tel.getTelefone()))       
+#===========agora e esse bloco==============================================
+        def listarNome(nome, email, insta, twitt, telef):
+            cont = 0
+            for tel in lista:#problema aqui
+                if tel.getNome() == lista:#aqui lista
+                    print('{} | {}'.format(tel.getNome(), tel.getTelefone()))
+                    break
+                cont += 1
+# ==========================================================================
+   
 #BIBLIOTECA
 
 # contato1={'nome': 'Alexandre', 'telefone': '85-9898-0000', 'email': 'alexandre@serv.com', 'instagram': 'alex123', 'twitter': '@alex321'}
