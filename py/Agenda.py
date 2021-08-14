@@ -2,7 +2,9 @@
 
      #INPUT === PRONTO
 import os
-lista=[]
+lista={}
+
+
 while True:
     print('------------------------------------------------')
     print('=====================AGENDA=====================')
@@ -33,7 +35,7 @@ while True:
         controle.listarNome(lista, nome)#problema aqui
     #============================================================================
     elif escolha == 3:
-        print('alterando contato')
+        controle.listarAll(lista)#problema 3
     elif escolha == 4:
         print=('removendo contato')
     else:
@@ -60,7 +62,7 @@ while True:
 # ==========================================================================
         def listarAll(lista):
             for tel in lista:
-                print('{} | {}'.format(tel.getNome(), tel.getTelefone()))       
+                print('{} | {}'.format(tel.getNome(), tel.getTelefone()))# problema 3      
 
 
         def deletarAll(lista):
