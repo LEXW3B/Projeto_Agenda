@@ -17,33 +17,30 @@ while True:# Estrutura de repetição
     escolha = int(input('Digite o número da sua escolha: '))#Faz escohas
     
     if escolha == 1:# Estrutura da primeira escolha
-        
-        dicionario = {
-            #dicionario.clear(),
-            ['nome'] = str(input('nome:  ')),
-            ['Telefone'] = int(input('Telefone:   ')),
-            ['email'] = (input('email:   ')),
-            ['Twitter'] = (input('Twitter:   ')),
-            ['Instagram'] = (input('Instagram:   ')),
-            #lista.append(dicionario.copy())
-
-            while True:
-                escolha = str(input('quer continuar ? S/N   ')).upper()[0]
-                if escolha in  'SN':
-                    break
-                print('ERROR! Responda apenas S ou N.')
-                if escolha == 'SN':
-                    escolha == escolha#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        }
-
-
-
-
-
+        #dicionario.clear()
+        dicionario['nome'] = str(input('nome:  '))
+        dicionario['Telefone'] = int(input('Telefone:   '))
+        dicionario['email'] = (input('email:   '))
+        dicionario['Twitter'] = (input('Twitter:   '))
+        dicionario['Instagram'] = (input('Instagram:   '))
+        lista.append(dicionario.copy())
+       
+        while True:
+            escolha = str(input('quer continuar ? S/N   ')).upper()[0]
+            if escolha in  'SN':
+                break
+            print('ERROR! Responda apenas S ou N.')
+            if escolha == 'SN':
+                escolha == escolha#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     elif escolha == 2:#buscar por nomes existentes
         nome = input('Pesquisar: ')
-        print(dicionario['nome'])    
+        print(nome, dicionario.items())
+
+
+
+        # for k, v in dicionario.items():
+        #     print(f' {k} = {v}')    
         
         
         
@@ -52,7 +49,10 @@ while True:# Estrutura de repetição
     elif escolha == 3:#alterar contato existente
         print()
     elif escolha == 4:#remover um contato existente
-        print=('removendo contato')#problema 03
+        del dicionario['nome']
+        for k, v in dicionario.items():
+            print(f'O {k} = {v} foi removido')  
+        #print=('Contato removido.')#problema 03
 
 
 
