@@ -141,12 +141,12 @@ def principal():
         print('=====================AGENDA=====================')
         print('-'*48)
         print('')
-        print('Para adicionar contato tecle-----------------[1]')
+        print('Para adicionar contato tecle-----------------[1]')   #feito
         print('Para alterar contatos tecle------------------[2]')
         print('Para remover contato tecle-------------------[3]')
         print('Para buscar nomes existentes tecle-----------[4]')
-        print('Para exibir todos os contato tecle-----------[5]')
-        print('Para sair tecle------------------------------[6]')
+        print('Para exibir todos os contato tecle-----------[5]')    #feito
+        print('Para sair tecle------------------------------[6]')    #feito
         print('')
         print('-'*48)
         print('')
