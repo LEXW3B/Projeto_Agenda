@@ -13,9 +13,17 @@ while True:
     print(' ')
 
     if menu == 1:
+        # while True:
+        #     email = input('Digite o e-mail do contato: ')
+        #     if not dicionario(dicionario, email):
+        #         break
+        #     else:
+        #         print('Esse e-mail já está cadastrado.')
+        #         print('Por favor, tente com outro e-mail.')
+        #nesse passo, o email recebido será único
         #bloco de adicionar contatos esta feito
         dicionario = {
-            'email': input('Digite seu e-mail: '),
+            'email': email,
             'nome': input('Digite o nome do contato: '),
             'telefone': input('Digite o telefone do contato: ')
         }
@@ -69,10 +77,6 @@ while True:
         else:
             print('Não existem contatos cadastrados.\n')
 
-    elif menu == 9:
-        #bloco de fechar o programa esta feito
-        break
-
 
         #bloco de buscar contato ainda nao funciona
     elif menu == 5:            
@@ -90,7 +94,11 @@ while True:
             else:
                 print('Não existe contato cadastrado com o email {}.'.format(email))     
         else:
-            print('Não existem contatos cadastrados.\n')    
+            print('Não existem contatos cadastrados.\n') 
+
+    elif menu == 9:
+        #bloco de fechar o programa esta feito
+        break   
 
 
 
